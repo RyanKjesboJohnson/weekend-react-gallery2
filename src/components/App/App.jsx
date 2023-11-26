@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
+import CreateDog from '../CreateDog/CreateDog';
 import './App.css'
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <header>
           <h1>Our Dog's Happy Endings</h1>
         </header>
+        <CreateDog />
         <GalleryList dogs = {dogsArray} whereMyDogsAt = {whereMyDogsAt}/>
       </div>
     );

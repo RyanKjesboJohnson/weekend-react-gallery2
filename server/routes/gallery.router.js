@@ -45,4 +45,31 @@ router.get('/', (req, res) => {
   })
 });
 
+// POST /gallery
+router.post('/', (req, res) => {
+  const dog = req.body
+  const sqlText = 
+    `
+    INSERT INTO gallery
+    ("title", "description", "url")
+    VALUES
+    ($1, $2, $3)
+    `
+
+  const sqlValues = [
+    dog.title,
+    dog.description,
+    dog.url
+  ]
+
+  pool.query(sqlText, sqlValues)
+    .then ((results) => {
+      res.sendStatus(201)
+    }).catch ((error) => {
+      console.error(error)
+      res.sendStatus(500)
+    })
+  }
+);
+
 module.exports = router;

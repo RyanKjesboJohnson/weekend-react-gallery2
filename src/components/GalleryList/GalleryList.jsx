@@ -13,10 +13,15 @@ function GalleryList({dogs, whereMyDogsAt}) {
         {dogs.map(dog => (
             <div className = "card" key={dog.id} data-testid="galleryItem">
                 <DogCardClick dog = {dog}/>
-                <div className = "container">
-                <h3>{dog.title}</h3>
-                <LikeButton id = {dog.id} whereMyDogsAt = {whereMyDogsAt} />
-        </div>
+                <span className = "container">
+                <p><b>{dog.title}</b> <LikeButton id = {dog.id} whereMyDogsAt = {whereMyDogsAt} />
+                </p>
+                <p>
+                Number of likes: {dog.likes}
+
+                </p>
+                
+        </span>
         </div>
         
             

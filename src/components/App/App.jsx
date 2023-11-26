@@ -34,7 +34,7 @@ function App() {
         <header>
           <h1>Our Dog's Happy Endings</h1>
         </header>
-        <CreateDog />
+        <CreateDog whereMyDogsAt = {whereMyDogsAt}/>
         <GalleryList dogs = {dogsArray} whereMyDogsAt = {whereMyDogsAt}/>
       </div>
     );

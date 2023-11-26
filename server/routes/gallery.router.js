@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const pool = require('../modules/pool')
+
 
 // PUT /gallery/like/:id
 router.put('/like/:id', (req, res) => {
